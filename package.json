@@ -1,0 +1,18 @@
+{
+  "name": "zahlschein2qr",
+  "version": "0.0.1",
+  "description": "Austrian SEPA transfer form to QR code converter",
+  "repository": "https://github.com/RavuAlHemio/zahlschein2qr",
+  "author": "Ondřej Hošek <ondra.hosek@gmail.com>",
+  "license": "CC0-1.0",
+  "private": false,
+  "scripts": {
+    "build": "yarn parcel build --no-scope-hoist"
+  },
+  "source": "./src/zahlschein2qr.ts",
+  "devDependencies": {
+    "@types/qrcode": "^1.5.5",
+    "parcel": "^2.11.0",
+    "qrcode": "^1.5.3"
+  }
+}

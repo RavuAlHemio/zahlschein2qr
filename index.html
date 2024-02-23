@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="utf-8" />
+<title>zahlschein2qr</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<script src="dist/zahlschein2qr.js"></script>
+</head>
+<body>
+  <form id="zahlschein2qr-form">
+    <p>
+      <label>
+        EmpfängerIn <small>Name/Firma</small>
+        <input type="text" name="recipient-name" maxlength="54" required="required" />
+      </label>
+    </p>
+    <p>
+      <label>
+        IBAN <small>EmpfängerIn</small>
+        <input type="text" name="recipient-iban" maxlength="54" required="required" />
+      </label>
+    </p>
+    <p>
+      <label>
+        BIC <small>(SWIFT-Code) der Empfängerbank</small>
+        <input type="text" name="recipient-bic" maxlength="11" />
+      </label>
+
+      <label>
+        EUR Betrag
+        <input type="number" name="amount" min="0" step="0.01" />
+      </label>
+    </p>
+    <p>
+      <label>
+        Zahlungsreferenz (vorgedruckt)
+        <input type="text" name="payment-reference" />
+      </label>
+    </p>
+    <p>
+      <label>
+        Verwendungszweck <small>wird bei ausgefüllter Zahlungsreferenz nicht an EmpfängerIn weitergeleitet</small>
+        <br/>
+        <input tpe="text" name="payment-reason" />
+      </label>
+    </p>
+
+    <p>
+      <input type="submit" value="umwandeln" />
+    </p>
+  </form>
+
+  <p>
+    <canvas id="qrcode-canvas"></canvas>
+  </p>
+</body>
+</html>
